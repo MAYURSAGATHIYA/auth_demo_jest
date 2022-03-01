@@ -1,7 +1,14 @@
-const p1 = require('./dal/index').db('CRED').collection('user');
+const mongoDb = require('./dal/index');
+const { get } = require('koa/lib/request');
 const pro_api = require('./api/pro_api');
+const get_all_test=require('./middle_reg_same_all_func_imp_test')
 
-const emailcheck = async (ctx, next) => {
+// const getAllfunc = async () => await mongoDb.db('CRED').collection('user').find().toArray();
+
+// console.log(getAllfunc,"this is get all ")
+
+
+const emailcheck =  (ctx, next) => {
 
     const {
         email
@@ -9,26 +16,25 @@ const emailcheck = async (ctx, next) => {
     const storeemail = {
         email
     }
-    console.log(storeemail, "this is storeemail")
+    console.log(storeemail,"store mail ")
     querydb = {
         email
     }
-    console.log(querydb,"querydb")
-    const email_from_db = await p1.find(querydb).toArray();
-    console.log(email_from_db, "email from db");
+    console.log(querydb,"query db ")
+    const email_from_db =  get_all_test.getAllfunc();
+
+    // console.log(email_from_db, "email from db");
 
     if (email_from_db.length === 0) {
         console.log("successfully registered")
         return next()
     }
-    console.log("same user exist")
-    ctx.status = 403;
-    ctx.body = {msg:"this email is already taken"}
-
+   ctx.status=403;
+   ctx.body={msg:"not valid"}
     return
-
-
 }
+
+
 module.exports = {
     emailcheck
 }

@@ -6,6 +6,8 @@ const client = new MongoClient("mongodb+srv://strongdemon:kdb65GK6zYJvRcg@strong
 });
 
 
+if (process.env.NODE_ENV != 'test') {
+  
 client.connect(err=>{
 
     if(err){
@@ -14,5 +16,27 @@ client.connect(err=>{
     }
     console.log("connected to mongo")
 })
+}
 
 module.exports=client;
+
+
+// import { MongoClient } from 'mongodb';
+
+// const uri = process.env.DB_URI;
+
+// const dbName = process.env.DB_NAME;
+
+// let client = new MongoClient(uri);
+
+// if (process.env.NODE_ENV != 'test') {
+//   console.log('Connecting to database...');
+//   client
+//     .connect()
+//     .then((res) => console.log('Connected'))
+//     .catch((err) => console.log(err));
+
+//   client.db(dbName);
+// }
+
+// export default client;

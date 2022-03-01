@@ -2,14 +2,16 @@
 //registration testing
 //=====================================
 const supertest = require("supertest");
-
 const app = require("./app");
-
 const email_db=require('./check_in_db/auth_check')
+const getAll=require('../middleware_for_reg_same');
+const get_all_test=require('../middle_reg_same_all_func_imp_test')
+
+// const { getAllfunc } = require("../middle_reg_same_all_func_imp_test");
 
 const request = supertest.agent(app.callback())
 
-describe("registrattion checking", () => {
+describe.skip("registrattion checking", () => {
     describe('middleware testing', () => {
         var _isEmailindb = [{
             first: "ok",
@@ -45,7 +47,7 @@ describe("registrattion checking", () => {
 // =====================================================
 // same password
 // ===================================================
-describe("registrattion checking", () => {
+describe.skip("registrattion checking", () => {
     describe('middleware testing', () => {
         var _isEmailindb = [{
             first: "ok",
@@ -80,66 +82,51 @@ describe("registrattion checking", () => {
 //====================================
 //====================================
 //====================================
+
+
+
+
 describe('checking same user ',() => {
   
-const _isEmailindb=email_db.isEmailindb
-    afterEach(()=>{
-        email_db.isEmailindb=_isEmailindb
-    })
-    test("same user exist or not", async () => {
-        email_db.isEmailindb=jest.fn(()=>({
-            status: true
-        }))
+// const _isEmailindb=middleware.emailcheck
+
+    // afterEach(()=>{
+    //     middleware.emailcheck=_isEmailindb
+    // })
+    // email_from_db =  get_all_test.getAllfunc
+    test("same user exist or not ", async () => {
+        get_all_test.getAllfunc=jest.fn(()=>({
+        email:"123@yahoo.com"
+    }))        
         
-        const data=await request.post("/registration").send({
-            first: "ok",
-            last:"ok",
-            email: "mkcmcpempepof241942194529459vuyvuyvufy@yahoo.com",
-            password: "1111",
-            confirmpassword: "1111"
+        const data=await request.post("/registration").send({ 
+            email:"13@yahoo.com"
         })
-        expect(data.body).toEqual({   first: "ok",
-        last:"ok",
-        email: "mkcmcpempepof241942194529459vuyvuyvufy@yahoo.com",
-        password: "1111",
-        confirmpassword: "1111"})
-    })
+        expect(data.body).toEqual({  msg:"not valid"})
     //==================    
 })
+})
+//========================
+// //========================
 
-//====================================
-//====================================
-//====================================
-
-// const email_testing=require('../middleware_for_reg_same')
-// const same_email_testing=email_testing.emailcheck
-
-
-// describe.skip("registrattion checking", () => {
-//     describe('middleware testing', () => {
-//         var _isEmailindb = [{
-//             first: "ok",
-//             last: "ok2",
-//             email: "123@yahoo.com",
-//             password: "1",
-//             confirmpassword: "1"
-//         }]
-
-//         test("all fields entered or not", async () => {
-//             _isEmailindb = jest.fn(() => ({
-//                 status: true
-//             }))
-
-//             const data = await request.post("/registration").send({
-//                 first: "ok",
-//                 last: "qw",
-//                 email: "123@yahoo.com",
-//                 password: "1",
-//                 confirmpassword: "1"
+//db main backup
+// describe('checking same user ',() => {
+  
+//     // const _isEmailindb=middleware.emailcheck
+    
+//         // afterEach(()=>{
+//         //     middleware.emailcheck=_isEmailindb
+//         // })
+//         // email_from_db =  get_all_test.getAllfunc
+//         test("same user exist or not ", async () => {
+//             get_all_test.getAllfunc=jest.fn(()=>({
+//             email:"123@yahoo.com"
+//         }))        
+            
+//             const data=await request.post("/registration").send({ 
+//                 email:"13@yahoo.com"
 //             })
-//             expect(data.body).toEqual({
-//                 message: "this email is already taken"
-//             })
-//         })
+//             expect(data.body).toEqual({  msg:"not valid"})
+//         //==================    
 //     })
-// })
+//     })

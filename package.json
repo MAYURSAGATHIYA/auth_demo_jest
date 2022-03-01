@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "cross-env NODE_ENV=test npx jest"
   },
-  "args":[
+  "args": [
     "bdd"
   ],
   "keywords": [],
@@ -31,5 +31,8 @@
     "nodemon": "^2.0.15",
     "supertest": "^6.2.2",
     "validatorjs": "^3.22.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
