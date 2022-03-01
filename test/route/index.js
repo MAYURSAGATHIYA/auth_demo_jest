@@ -1,5 +1,4 @@
 const routerauth = require("../../routes/regrt");
-// const routerblog=require("./blog")
 
 const routes = [routerauth];
 module.exports = (app) => {

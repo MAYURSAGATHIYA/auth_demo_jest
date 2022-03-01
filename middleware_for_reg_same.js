@@ -28,10 +28,6 @@ const emailcheck = async (ctx, next) => {
     return
 
 
-    // email_from_db.length===0? ctx.body="valid":ctx.body="not valid"
-
-    // ctx.status=200;
-
 }
 module.exports = {
     emailcheck
