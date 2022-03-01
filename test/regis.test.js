@@ -3,18 +3,15 @@
 //=====================================
 const supertest = require("supertest");
 const app = require("./app");
-const email_db=require('./check_in_db/auth_check')
-const getAll=require('../middleware_for_reg_same');
 const get_all_test=require('../middle_reg_same_all_func_imp_test')
-
-// const { getAllfunc } = require("../middle_reg_same_all_func_imp_test");
 
 const request = supertest.agent(app.callback())
 
-describe.skip("registrattion checking", () => {
+describe("registrattion checking", () => {
     describe('middleware testing', () => {
         var _isEmailindb = [{
             first: "ok",
+            last:"von",
             email: "123@yahoo.com",
             password: "1111",
             confirmpassword: "1111"
@@ -47,7 +44,7 @@ describe.skip("registrattion checking", () => {
 // =====================================================
 // same password
 // ===================================================
-describe.skip("registrattion checking", () => {
+describe("registrattion checking", () => {
     describe('middleware testing', () => {
         var _isEmailindb = [{
             first: "ok",
@@ -79,13 +76,6 @@ describe.skip("registrattion checking", () => {
 //====================================================
 //same email id check
 //====================================================
-//====================================
-//====================================
-//====================================
-
-
-
-
 describe('checking same user ',() => {
   
 // const _isEmailindb=middleware.emailcheck
@@ -96,11 +86,19 @@ describe('checking same user ',() => {
     // email_from_db =  get_all_test.getAllfunc
     test("same user exist or not ", async () => {
         get_all_test.getAllfunc=jest.fn(()=>({
-        email:"123@yahoo.com"
+            first: "ok",
+            last: "qw",
+            email: "123@yahoo.com",
+            password: "1111",
+            confirmpassword: "1111"
     }))        
         
         const data=await request.post("/registration").send({ 
-            email:"13@yahoo.com"
+            first: "ok",
+            last: "qw",
+            email: "123@yahoo.com",
+            password: "1111",
+            confirmpassword: "1111"
         })
         expect(data.body).toEqual({  msg:"not valid"})
     //==================    

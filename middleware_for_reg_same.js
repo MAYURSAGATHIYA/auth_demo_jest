@@ -16,11 +16,11 @@ const emailcheck =  (ctx, next) => {
     const storeemail = {
         email
     }
-    console.log(storeemail,"store mail ")
+    // console.log(storeemail,"store mail ")
     querydb = {
         email
     }
-    console.log(querydb,"query db ")
+    // console.log(querydb,"query db ")
     const email_from_db =  get_all_test.getAllfunc();
 
     // console.log(email_from_db, "email from db");
