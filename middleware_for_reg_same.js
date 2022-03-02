@@ -30,7 +30,7 @@ const emailcheck =  (ctx, next) => {
         return next()
     }
    ctx.status=403;
-   ctx.body={msg:"not valid"}
+   ctx.body={msg:"this email id has been taken"}
     return
 }
 

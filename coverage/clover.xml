@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646135899489" clover="3.2.0">
-  <project timestamp="1646135899489" name="All files">
-    <metrics statements="511" coveredstatements="251" conditionals="92" coveredconditionals="16" methods="78" coveredmethods="5" elements="681" coveredelements="272" complexity="0" loc="511" ncloc="511" packages="8" files="31" classes="31"/>
+<coverage generated="1646193615954" clover="3.2.0">
+  <project timestamp="1646193615955" name="All files">
+    <metrics statements="505" coveredstatements="248" conditionals="92" coveredconditionals="16" methods="77" coveredmethods="6" elements="674" coveredelements="270" complexity="0" loc="505" ncloc="505" packages="7" files="30" classes="30"/>
     <package name="authentication">
-      <metrics statements="161" coveredstatements="70" conditionals="82" coveredconditionals="15" methods="18" coveredmethods="3"/>
+      <metrics statements="161" coveredstatements="71" conditionals="82" coveredconditionals="15" methods="18" coveredmethods="4"/>
       <file name="mdl_for_token.js" path="D:\NODEJS\projects\backup\jest\authentication\mdl_for_token.js">
         <metrics statements="22" coveredstatements="6" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -181,7 +181,7 @@
         <line num="46" count="1" type="stmt"/>
       </file>
       <file name="server.js" path="D:\NODEJS\projects\backup\jest\authentication\server.js">
-        <metrics statements="18" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -198,7 +198,7 @@
         <line num="25" count="1" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
       </file>
     </package>
@@ -534,9 +534,9 @@
       </file>
     </package>
     <package name="authentication.routes">
-      <metrics statements="56" coveredstatements="55" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="55" coveredstatements="54" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="regrt.js" path="D:\NODEJS\projects\backup\jest\authentication\routes\regrt.js">
-        <metrics statements="56" coveredstatements="55" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="55" coveredstatements="54" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -558,41 +558,40 @@
         <line num="24" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
         <line num="51" count="1" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
         <line num="57" count="1" type="stmt"/>
         <line num="58" count="1" type="stmt"/>
         <line num="59" count="1" type="stmt"/>
         <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
         <line num="64" count="1" type="stmt"/>
         <line num="65" count="1" type="stmt"/>
         <line num="66" count="1" type="stmt"/>
         <line num="67" count="1" type="stmt"/>
-        <line num="68" count="1" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
         <line num="74" count="1" type="stmt"/>
         <line num="75" count="1" type="stmt"/>
         <line num="76" count="1" type="stmt"/>
         <line num="77" count="1" type="stmt"/>
-        <line num="78" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
         <line num="82" count="1" type="stmt"/>
-        <line num="83" count="1" type="stmt"/>
-        <line num="86" count="1" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
         <line num="90" count="1" type="stmt"/>
-        <line num="91" count="1" type="stmt"/>
       </file>
     </package>
     <package name="authentication.test">
@@ -608,26 +607,15 @@
         <line num="7" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="authentication.test.check_in_db">
-      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="auth_check.js" path="D:\NODEJS\projects\backup\jest\authentication\test\check_in_db\auth_check.js">
-        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-      </file>
-    </package>
     <package name="authentication.test.route">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.js" path="D:\NODEJS\projects\backup\jest\authentication\test\route\index.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
       </file>
     </package>
   </project>

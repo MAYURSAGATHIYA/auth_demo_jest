@@ -29,13 +29,12 @@ const resetpwd_middleware=require('../middleware_for_reset_pwd')
 
 
 //=========================
-const sameuser=require('../test/check_in_db/auth_check')
 
-router.post('/registration', middleware_for_register.middleware,middleware_for_same_user.emailcheck)
-// router.post('/registration',middleware_for_same_user.emailcheck )
+
+// router.post('/registration', pro_api.createpro)
 
 //======================================================
-// router.post('/registration', middleware_for_register.middleware,middleware_for_same_user.emailcheck ,pro_api.createpro)
+router.post('/registration', middleware_for_register.middleware,middleware_for_same_user.emailcheck ,pro_api.createpro)
 router.get('/getallusers',pro_api.getpros)
 router.get('/getpro/:id', pro_api.getpro)
 router.delete('/delpro/:id', pro_api.delpro)

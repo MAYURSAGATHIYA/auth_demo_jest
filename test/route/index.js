@@ -1,3 +1,5 @@
+//aa file app.js ma connected chhe 
+
 const routerauth = require("../../routes/regrt");
 
 const routes = [routerauth];
